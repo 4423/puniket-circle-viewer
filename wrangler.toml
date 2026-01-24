@@ -1,5 +1,5 @@
 name = "puniket-circle-viewer"
-compatibility_date = "2026-01-25"
+compatibility_date = "2026-01-24"
 
 [observability]
 enabled = true
