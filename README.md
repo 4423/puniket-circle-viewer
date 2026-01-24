@@ -1,24 +1,35 @@
-# puniket-circle-viewer
+# Nuxt Minimal Starter
 
-## Project setup
-```
-npm install
-```
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Setup
 
-### Compiles and minifies for production
-```
-npm run build
+Make sure to install dependencies:
+
+```bash
+pnpm install
 ```
 
-### Lints and fixes files
-```
-npm run lint
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+pnpm dev
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Production
+
+Build the application for production:
+
+```bash
+pnpm build
+```
+
+Locally preview production build:
+
+```bash
+pnpm preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
