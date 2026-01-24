@@ -1,0 +1,6 @@
+name = "puniket-circle-viewer"
+compatibility_date = "2026-01-25"
+
+[observability]
+enabled = true
+head_sampling_rate = 1
