@@ -1,31 +1,23 @@
 {
   "name": "puniket-circle-viewer",
-  "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "@fortawesome/vue-fontawesome": "^0.1.10",
-    "axios": "^0.19.2",
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vue-analytics": "^5.22.1",
-    "vue-good-table": "^2.21.0",
-    "vue-router": "^3.2.0"
+    "@nuxt/eslint": "1.13.0",
+    "@tanstack/vue-table": "^8.21.3",
+    "eslint": "^9.0.0",
+    "nuxt": "^4.3.0",
+    "vue": "^3.5.27",
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "@nuxtjs/tailwindcss": "^6.14.0"
   }
 }
