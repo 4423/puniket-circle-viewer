@@ -1,20 +1,23 @@
 <template>
-  <div id="app" class="my-4">
-    <div class="home">
+  <div
+    id="app"
+    class="min-w-[700px] p-[15px] my-4 text-center text-[#2c3e50] antialiased"
+  >
+    <div>
       <h1 class="text-3xl font-bold my-4">Puniket Circle Viewer</h1>
 
-      <div class="header">
-        <p class="usage">
+      <div class="max-w-[800px] my-5 mx-auto">
+        <p class="mt-4 mb-12">
           ぷにケットのサークル配置リストをいい感じに表示するアプリです
         </p>
-        <div class="form">
-          <div class="form-option">
-            <label for="file">
+        <div>
+          <div class="p-4 my-4 bg-[#f8f8f8] rounded-[10px]">
+            <label class="float-left">
               サークル配置リストの Web ページを保存した HTML
               ファイルを選択してください
             </label>
             <input
-              class="text-sm"
+              class="text-sm w-full my-2"
               id="file"
               type="file"
               name="file"
@@ -23,17 +26,17 @@
             />
           </div>
 
-          <p id="or">または</p>
+          <p class="my-4">または</p>
 
-          <div class="form-option">
-            <label for="url">
+          <div class="p-4 my-4 bg-[#f8f8f8] rounded-[10px]">
+            <label class="float-left">
               サークル配置リストの URL を入力してください
-              <span id="msg-cors">
+              <span class="text-[0.8em] font-semibold text-[#009688]">
                 （ブラウザの CORS 制限の無効化が必要です）
               </span>
             </label>
             <input
-              class="text-sm"
+              class="text-sm w-full px-5 py-3 my-2 box-border rounded-[3px] border border-[rgb(118,118,118)]"
               id="url"
               v-model="inputURL"
               type="url"
@@ -45,7 +48,7 @@
         </div>
       </div>
 
-      <div class="content">
+      <div class="mt-16 mb-8">
         <CircleList v-if="data" :title="data.title" :circles="data.circles" />
         <Message v-else :msg="msg" />
       </div>
@@ -180,61 +183,5 @@ const validURL: (str: string) => boolean = (str) => {
 <style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  padding: 15px;
-  min-width: 700px;
-}
-
-.header {
-  max-width: 800px;
-  margin: 20px auto;
-}
-
-.form label {
-  float: left;
-}
-.form-option {
-  padding: 1em;
-  margin: 1em 0;
-  background-color: #f8f8f8;
-  border-radius: 10px;
-}
-
-.usage {
-  margin-top: 1em;
-  margin-bottom: 3em;
-}
-
-#or {
-  margin: 1em 0;
-}
-
-#msg-cors {
-  font-size: 0.8em;
-  font-weight: 600;
-  color: #009688;
-}
-
-.form-option input[type="file"] {
-  width: 100%;
-  margin: 8px 0;
-}
-
-.form-option input[type="url"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border-radius: 3px;
-  border-width: 1px;
-  border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-}
-
-.content {
-  margin-top: 4em;
-  margin-bottom: 2em;
 }
 </style>
