@@ -3,55 +3,52 @@
     id="app"
     class="min-w-[700px] p-[15px] my-4 text-center text-[#2c3e50] antialiased"
   >
-    <div>
-      <h1 class="text-3xl font-bold my-4">Puniket Circle Viewer</h1>
+    <h1 class="text-3xl font-bold my-4">Puniket Circle Viewer</h1>
 
-      <div class="max-w-[800px] my-5 mx-auto">
-        <p class="mt-4 mb-12">
-          ぷにケットのサークル配置リストをいい感じに表示するアプリです
-        </p>
-        <div>
-          <div class="p-4 my-4 bg-[#f8f8f8] rounded-[10px]">
-            <label class="float-left">
-              サークル配置リストの Web ページを保存した HTML
-              ファイルを選択してください
-            </label>
-            <input
-              class="text-sm w-full my-2"
-              id="file"
-              type="file"
-              name="file"
-              accept="text/html,.htm,.html"
-              @change="onFileChange"
-            />
-          </div>
+    <div class="max-w-[800px] my-5 mx-auto">
+      <p class="mt-4 mb-12">
+        ぷにケットのサークル配置リストをいい感じに表示するアプリです
+      </p>
 
-          <p class="my-4">または</p>
-
-          <div class="p-4 my-4 bg-[#f8f8f8] rounded-[10px]">
-            <label class="float-left">
-              サークル配置リストの URL を入力してください
-              <span class="text-[0.8em] font-semibold text-[#009688]">
-                （ブラウザの CORS 制限の無効化が必要です）
-              </span>
-            </label>
-            <input
-              class="text-sm w-full px-5 py-3 my-2 box-border rounded-[3px] border border-[rgb(118,118,118)]"
-              id="url"
-              v-model="inputURL"
-              type="url"
-              name="url"
-              pattern="https?://www.puniket.com/.*"
-              placeholder="例）http://www.puniket.com/xxxx_list.htm"
-            />
-          </div>
-        </div>
+      <div class="p-4 my-4 bg-[#f8f8f8] rounded-[10px]">
+        <label class="float-left">
+          サークル配置リストの Web ページを保存した HTML
+          ファイルを選択してください
+        </label>
+        <input
+          class="text-sm w-full my-2"
+          id="file"
+          type="file"
+          name="file"
+          accept="text/html,.htm,.html"
+          @change="onFileChange"
+        />
       </div>
 
-      <div class="mt-16 mb-8">
-        <CircleList v-if="data" :title="data.title" :circles="data.circles" />
-        <Message v-else :msg="msg" />
+      <p class="my-4">または</p>
+
+      <div class="p-4 my-4 bg-[#f8f8f8] rounded-[10px]">
+        <label class="float-left">
+          サークル配置リストの URL を入力してください
+          <span class="text-[0.8em] font-semibold text-[#009688]">
+            （ブラウザの CORS 制限の無効化が必要です）
+          </span>
+        </label>
+        <input
+          class="text-sm w-full px-5 py-3 my-2 box-border rounded-[3px] border border-[rgb(118,118,118)]"
+          id="url"
+          v-model="inputURL"
+          type="url"
+          name="url"
+          pattern="https?://www.puniket.com/.*"
+          placeholder="例）http://www.puniket.com/xxxx_list.htm"
+        />
       </div>
+    </div>
+
+    <div class="mt-16 mb-8">
+      <CircleList v-if="data" :title="data.title" :circles="data.circles" />
+      <Message v-else :msg="msg" />
     </div>
   </div>
 </template>
