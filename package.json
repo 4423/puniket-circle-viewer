@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/eslint": "1.13.0",
+    "@nuxt/eslint": "1.15.2",
     "@tanstack/vue-table": "^8.21.3",
     "eslint": "^9.0.0",
     "nuxt": "^4.3.0",
